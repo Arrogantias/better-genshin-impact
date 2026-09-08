@@ -222,8 +222,9 @@ public class AutoDomainTask : ISoloTask<Dictionary<string, int>>
         for (var i = 0; i < _taskParam.DomainRoundNum; i++)
         {
             // 0. 关闭秘境提示
-            Logger.LogDebug("0. 关闭秘境提示");
-            await CloseDomainTip();
+            // Logger.LogDebug("0. 关闭秘境提示");
+            // await CloseDomainTip();
+            await Delay(5000, _ct);
 
             if (_jsonCombatStrategyPath != null)
             {
